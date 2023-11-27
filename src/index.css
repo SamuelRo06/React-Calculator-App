@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --dark: #1b1b1b; /* o cualquier otro valor de color oscuro que prefieras */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main {
+    background-color: #eee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.calculator {
+    background-color: #010113 ;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%; /* Ajusta el ancho de la calculadora al 50% del ancho de la pantalla */
+    max-width: 600px; /* Establece un ancho máximo para la calculadora */
+}
+  
+.display {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 24px; /* Aumenta el tamaño de la fuente */
+    font-family: 'Courier New', Courier, monospace; /* Cambia la fuente a una más adecuada para una calculadora */
+}
+  
+.operators {
+    display: flex; /* Hace que el contenedor de los botones sea flexible */
+}
+  
+.operators button {
+    background-color: rgb(61, 61, 61); /* Cambia el color de fondo a rojo */
+    color: #fff; /* Cambia el color del texto a blanco */
+    border: none;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    flex: 1 1 calc(100% / 3 - 10px); /* Añade la propiedad flex y limita el número de botones por fila a 3 */
+}
+  
+.digits {
+    display: flex; /* Hace que el contenedor de los botones sea flexible */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan a la siguiente línea */
+}
+  
+.digits button {
+    background-color: #fff; /* Cambia el color de fondo a blanco */
+    color: #000; /* Cambia el color del texto a negro */
+    border: none;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    flex: 1 1 calc(100% / 3 - 10px); /* Añade la propiedad flex y limita el número de botones por fila a 3 */
+}
+  
+.operators button:active, .digits button:active {
+    background-color: #bbb; /* Cambia el color de fondo a un gris más oscuro */
 }
